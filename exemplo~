@@ -1,0 +1,10 @@
+#lang racket
+#lang racket
+;; (X Y -> Y) Y Lista(X) -> Y
+;; (reduz f base (list x1 x2 ... xn) produz
+;; (f x1 (f x2 ... (f xn base)))
+(define (reduz f base lst)
+  (cond
+    [(empty? lst) base]
+    [else (f (first lst)
+             (reduz f base (rest lst)))]))
