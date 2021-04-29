@@ -1,0 +1,11 @@
+#lang racket
+;; (X->Y) Lista(X) -> Lista(Y)
+;; Devolve uma lista aplicando f a cada elemento de lista, isto eh
+;; (mapeia f (lista x1 x2 ... xn)) produz
+;; (list (f x1) (f x2) ... (f xn))
+(define (mapeia f lst)
+  (cond
+    [(empty? lst) empty]
+    [else (cons (f (first lst))
+                (mapeia f (rest lst)))]
+))
