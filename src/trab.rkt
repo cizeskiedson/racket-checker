@@ -76,7 +76,12 @@
                    (string-append "\nNumero de imports: " (~v(calcula-imports arq)))
                    (string-append "\n"))
              )
+  (gera-pontos (length arq) (calcula-comentarios arq) (calcula-funcoes arq) (calcula-imports arq))
   )
+;; funcao que calcula os pesos e gera a pontuacao
+(define (gera-pontos m1 m2 m3 m4)
+  (printf "\nPontuacao: ~a" (+ (* m1 0.4) (* m2 0.2) (* m3 0.3) (* m4 0.1))
+  ))
 
 ;; funcao que le os arquivos
 (define (le-arquivos)
