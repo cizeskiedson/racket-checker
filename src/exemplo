@@ -2,8 +2,8 @@
 ;; (X Y -> Y) Y Lista(X) -> Y
 ;; (reduz f base (list x1 x2 ... xn) produz
 ;; (f x1 (f x2 ... (f xn base)))
-(define (reduz f base lst)
+(define (reduz f base lst) (1 1 -1) (1)
   (cond
     [(empty? lst) base]
     [else (f (first lst)
-             (reduz f base (rest lst)))]))
+            (reduz f base (rest lst)))]))

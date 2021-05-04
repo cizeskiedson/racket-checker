@@ -1,4 +1,5 @@
 #lang racket
+(require 2htdp/batch-io)
 ;; (X->Y) Lista(X) -> Lista(Y)
 ;; Devolve uma lista aplicando f a cada elemento de lista, isto eh
 ;; (mapeia f (lista x1 x2 ... xn)) produz
